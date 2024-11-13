@@ -69,7 +69,7 @@ in "Dashboard/Manage Jenkins/Tools":
 https://github.com/allure-framework/allure2/releases
 
 2) Add the path "...\allure-2.20.1\bin" to the system variables
-(Confirm that it has been added by typing in the cmd
+(Confirm that it has been added by typing in the cmd)
 ```
 allure --version
 ```

@@ -42,7 +42,7 @@ public class DeleteBooksByIdTests {
     }
 
     @Test // Treating it as a bug here: Fails as entries are not saved properly
-    public void deleteBookById_expect_fieldsChanged() {
+    public void deleteBookById_expect_bookDeleted() {
         // Create a new book entry
         BookDTO createdBookDTO = BookDTO.getDefaultWithRandomId();
         given()

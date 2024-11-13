@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.greaterThan;
+import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
 /**
@@ -29,6 +30,7 @@ public class GetBooksTests {
 
     @Test
     public void getBooks_expect_responseStatusCode200() {
+        int TOTAL_BOOKS = 200;
         Response response = given()
                 .when()
                     .get("/api/v1/Books")
@@ -37,20 +39,9 @@ public class GetBooksTests {
                     .body("size()", greaterThan(0))
                     .extract()
                     .response();
-        }
-
-    @Test
-    public void getBook_expect_responseContainsBookDtoArray() {
-        Response response = given()
-                .when()
-                    .get("/api/v1/Books")
-                .then()
-                    .extract()
-                    .response();
-
         String jsonResponse = response.asString();
         BookDTO[] bookDTOs = SerializationHelper.deSerializeJsonToDto(jsonResponse, BookDTO[].class);
-        assertTrue(bookDTOs.length > 0);
+        assertEquals(TOTAL_BOOKS, bookDTOs.length);
     }
 
 }

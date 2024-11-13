@@ -80,6 +80,8 @@ public class PostBooksTests {
 
     @Test // Treating it as a bug here: If the API is designed to prevent similar ids, then
     // 409 Conflict should appear when we try to add a new book with the same id
+    // In case we allowed to have similar ids it would be ok, but it is an issue I would raise
+    // and discuss it with the Product Owner and/or the Developer
     public void addNewBook_alreadyExistingId_expect_response409Conflict() {
         // Create a new book entry with the same id as an existing one
         given()
@@ -106,6 +108,9 @@ public class PostBooksTests {
                 .post("/api/v1/Books")
                 .then()
                 .statusCode(200);
+
+        // We could do a GET here and assert that the book returned has values null in these fields
+        // but for the sake of this project there is no need to
     }
 
 }

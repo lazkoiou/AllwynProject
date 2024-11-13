@@ -24,7 +24,9 @@ import static org.testng.AssertJUnit.assertEquals;
  */
 @Slf4j
 public class PutBooksByIdTests {
+
     private final List<BookDTO> bookDTOsToDelete = new ArrayList<>();
+
     @BeforeClass
     public void setup() {
         PropertiesManager.loadProperties();

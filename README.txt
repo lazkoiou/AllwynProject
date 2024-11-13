@@ -4,6 +4,16 @@
 
 Allwyn Project - API Automation Testing Assessment: Online Bookstore
 
+Some notes regarding my approach:
+---------------------------------
+
+Since the data is not saved (e.g. when I POST /api/v1/Books to create a new book)
+and the data are changing (e.g. when I GET /api/v1/Books/{id} twice, I get different data),
+the approach that I followed was not to find a way to make tests pass to provide a green report.
+Instead, I followed what I would normally do i.e. use POST to create a new book, then GET to get
+the book that was created and when asserting the fields I make the test fail - as it should.
+I marked the tests that fail with the comments "Treating it as a bug" in such cases.
+
 ########################
 # Project dependencies #
 ########################
@@ -33,7 +43,7 @@ mvn clean test
 ```
 
 All tests should run. Expected results should be:
-Tests run: 12, Failures: 5, Errors: 0, Skipped: 0
+Tests run: 11, Failures: 5, Errors: 0, Skipped: 0
 
 
 ###########

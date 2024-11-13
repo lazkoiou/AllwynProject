@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Books Api Suite">
+
+    <test name="Books API tests">
+        <classes>
+            <class name="fakeRestApis.books.GetBooksTests"/>
+            <class name="fakeRestApis.books.PostBooksTests"/>
+            <class name="fakeRestApis.books.GetBooksByIdTests"/>
+            <class name="fakeRestApis.books.PutBooksByIdTests"/>
+            <class name="fakeRestApis.books.DeleteBooksByIdTests"/>
+        </classes>
+    </test>
+</suite>

@@ -4,6 +4,20 @@
 
 Allwyn Project - API Automation Testing Assessment: Online Bookstore
 
+Deliverables:
+-------------
+
+1. Source Code: on https://github.com/lazkoiou/AllwynProject
+2. Test Report:
+    - screenshots on path "deliverables/report/screenshots/"
+    - report on path "deliverables/report/allureReport/" that
+        I created locally after running the tests that can be run by following
+        instructions below on allure (after installing allure you can open
+        the results with the command 'allure serve /path/to/allure-results')
+3. CI/CD files:
+    - Jenkinsfile: on project level directory
+    - .github/workflows/maven.yml: on project level directory
+
 Some notes regarding my approach:
 ---------------------------------
 

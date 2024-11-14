@@ -89,6 +89,14 @@ After all dependencies have been installed, we need to:
  1. Create a pipeline (New Item > Pipeline)
  2. Check the GitHub project checkmark and fill it with
     the project's git (https://github.com/lazkoiou/AllwynProject/)
+ 3. In the Pipeline section, configure it to be
+        Definition: Pipeline script from SCM
+        SCM: Git
+        Repository URL: https://github.com/lazkoiou/AllwynProject/
+
+If all the steps have been completed, the Jenkins pipeline should run the tests
+and create and attach an allure report. You can find a screenshot of this in the
+deliverables folder "deliverables/report/screenshots"
 
 ##################
 # Allure reports #

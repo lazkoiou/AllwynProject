@@ -85,6 +85,11 @@ in "Dashboard/Manage Jenkins/Tools":
     Install automatically: Yes
     Install from Maven Central: 2.29.0
 
+After all dependencies have been installed, we need to:
+ 1. Create a pipeline (New Item > Pipeline)
+ 2. Check the GitHub project checkmark and fill it with
+    the project's git (https://github.com/lazkoiou/AllwynProject/)
+
 ##################
 # Allure reports #
 ##################

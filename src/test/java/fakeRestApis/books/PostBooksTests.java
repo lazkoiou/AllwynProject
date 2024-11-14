@@ -93,24 +93,24 @@ public class PostBooksTests {
                 .statusCode(409);
     }
 
-//    @Test
-//    public void addNewBook_nullableFieldsAreNull_expect_response200() {
-//        BookDTO bookDTO = BookDTO.getDefaultWithRandomId();
-//        bookDTO.setTitle(null);
-//        bookDTO.setDescription(null);
-//        bookDTO.setExcerpt(null);
-//
-//        // Create a new book entry with null id
-//        given()
-//                .header("Content-Type", "application/json")
-//                .body(SerializationHelper.serializeDtoToJson(bookDTO))
-//                .when()
-//                .post("/api/v1/Books")
-//                .then()
-//                .statusCode(200);
-//
-//        // We could do a GET here and assert that the book returned has values null in these fields
-//        // but for the sake of this project there is no need to
-//    }
+    @Test
+    public void addNewBook_nullableFieldsAreNull_expect_response200() {
+        BookDTO bookDTO = BookDTO.getDefaultWithRandomId();
+        bookDTO.setTitle(null);
+        bookDTO.setDescription(null);
+        bookDTO.setExcerpt(null);
+
+        // Create a new book entry with null id
+        given()
+                .header("Content-Type", "application/json")
+                .body(SerializationHelper.serializeDtoToJson(bookDTO))
+                .when()
+                .post("/api/v1/Books")
+                .then()
+                .statusCode(200);
+
+        // We could do a GET here and assert that the book returned has values null in these fields
+        // but for the sake of this project there is no need to
+    }
 
 }

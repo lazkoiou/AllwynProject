@@ -1,6 +1,5 @@
-###########
+
 # Project #
-###########
 
 Allwyn Project - API Automation Testing Assessment: Online Bookstore
 
@@ -28,17 +27,14 @@ Instead, I followed what I would normally do i.e. use POST to create a new book,
 the book that was created and when asserting the fields I make the test fail - as it should.
 I marked the tests that fail with the comments "Treating it as a bug" in such cases.
 
-########################
+
 # Project dependencies #
-########################
 
 - Apache Maven (exact version installed: 3.5.3)
 - Java 17 (exact version installed: 17.0.6)
 
 
-####################
 # What is included #
-####################
 
 Helpers and DTOs are located in:    src/main/java
 Tests are located in:               src/test/java/fakeRestApis/books
@@ -46,9 +42,7 @@ Suites are located in:              src/test/resources/suites/api
 Properties are located in:          src/main/resources/
 
 
-##############
 # How to run #
-##############
 
 Open a terminal and type:
 
@@ -60,9 +54,7 @@ All tests should run. Expected results should be:
 Tests run: 11, Failures: 5, Errors: 0, Skipped: 0
 
 
-###########
 # Jenkins #
-###########
 
 After installing Jenkins, some jenkins configurations are required to run the project pipeline
 
@@ -105,9 +97,7 @@ with the master branch. We have 2 options:
     - we can set the regex as 'H * * * *' to check every hour if any merge has occurred
 
 
-##################
 # Allure reports #
-##################
 
 1) Download Allure from GitHub: (suggested version: 2.20)
 https://github.com/allure-framework/allure2/releases

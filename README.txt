@@ -98,6 +98,13 @@ If all the steps have been completed, the Jenkins pipeline should run the tests
 and create and attach an allure report. You can find a screenshot of this in the
 deliverables folder "deliverables/report/screenshots"
 
+Lastly, to complete the CI/CD, so that a Jenkins build is performed after each merge
+with the master branch. We have 2 options:
+1. Create a GitHub hook for scm polling
+2. Poll SCM (used this approach for the sake of this project)
+    - we can set the regex as 'H * * * *' to check every hour if any merge has occurred
+
+
 ##################
 # Allure reports #
 ##################
